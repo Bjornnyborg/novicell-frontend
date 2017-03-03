@@ -42,6 +42,7 @@ var compileScripts = function(isWatchTask){
         var useJscs = ignores.indexOf("jscs") == -1;
         var useSourcemaps = ignores.indexOf("sourcemaps") == -1;
         var useMinify = ignores.indexOf("minify") == -1;
+        var useBabel = ignores.indexOf("babel") == -1;
 
         checkFilesExist(b.scripts).then(
             function () {},
@@ -63,8 +64,9 @@ var compileScripts = function(isWatchTask){
         .pipe(plugins.if(useJscs, plugins.jscs()))
         .pipe(plugins.if(useJscs, plugins.jscsStylish()))
         .pipe(plugins.if(useSourcemaps, plugins.sourcemaps.init()))
+        .pipe(plugins.if(useBabel, plugins.babel()))
         .pipe(plugins.concat(b.name + ".min.js"))
-        .pipe(plugins.if(useMinify, plugins.uglify()))
+        //.pipe(plugins.if(useMinify, plugins.uglify()))
         .pipe(plugins.if(useSourcemaps, plugins.sourcemaps.write('.')))
         .pipe(gulp.dest(config.scriptsDist));
     });

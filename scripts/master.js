@@ -3,11 +3,6 @@
 * Novicell master
 *  Author: APN modified by DLA
 *  Use this file to call functions in other files, on document ready, window.resize etc.
-*  ------
-* Dependencies: jquery, novicell.js, other files with awesome functions.
-*  Usage: $(function () {
-*              projectName.slider.heroSlider($('.owl-carousel'));
-*         }); // Document ready end
 */
 
 var novicell = novicell || {};
@@ -23,12 +18,10 @@ $(function () {
     //projectName.slider.heroSlider($('.owl-carousel'));
     svg4everybody(); // Fix SVG spritemap in IE/Edge
 
-
-    novicell.font.webfont({
-        google: { families: ['Roboto:300:latin'] },
-        custom: { families: ['AFDiwa-Light'], urls: ['/dist/css/webfont.min.css'] }
-    });
-    //novicell.font.local("Danni Er Nice");
+    var evens = [];
+    var odds = evens.map(v => v + 1);
+    var pairs = evens.map(v => ({ even: v, odd: v + 1 }));
+    var nums = evens.map((v, i) => v + i);
 
 }); // Document ready end
 

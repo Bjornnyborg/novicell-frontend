@@ -17,7 +17,7 @@ module.exports = (function () {
         bundles: [
             {
                 name: "vendor",
-                ignorePlugins: ["jscs", "jshint", "watch"], // add "minify", to ignore minifaction on a bundle
+                ignorePlugins: ["jscs", "jshint", "babel", "watch"], // add "minify", to ignore minifaction on a bundle
                 scripts: [
                     vendorPath + "/svg4everybody/dist/svg4everybody.js",
                     vendorPath + "/jquery/dist/jquery.js"
@@ -25,6 +25,7 @@ module.exports = (function () {
             },
             {
                 name: "master",
+                ignorePlugins: ["babel"],
                 scripts: [
                     projectPath + "scripts/components/novicell.js",
                     projectPath + "scripts/components/novicell.debounce.js",
