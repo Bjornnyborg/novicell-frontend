@@ -29,7 +29,6 @@ module.exports = (function () {
                     projectPath + "scripts/components/novicell.debounce.js",
                     projectPath + "scripts/components/novicell.visible.js",
                     projectPath + "scripts/components/novicell.embed.js",
-                    projectPath + "scripts/components/novicell.overlay.js",
                     projectPath + "scripts/components/novicell.cookieinfo.js",
                     projectPath + "scripts/components/novicell.map.js",
                     projectPath + "scripts/components/novicell.font.js",
