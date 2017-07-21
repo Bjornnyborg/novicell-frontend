@@ -1,10 +1,4 @@
-node_modules/
-dist/
-vendor/
-
-*.log
-.vscode/
-web.config
-
-npm-debug.log.*
-*.orig
+dist
+node_modules
+npm-debug.log
+.sass-cache

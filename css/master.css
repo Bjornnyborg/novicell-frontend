@@ -1,0 +1,24 @@
+
+:root {
+    --color-black: #000;
+}
+
+.a {
+  color: var(--color-black);
+
+    &--mod {
+        .icon { width: 20px;}
+        &__title {
+            color: red;
+        }
+    }
+
+    .icon {
+        width: 90px;
+
+        .test {
+            display: flex;
+            background-color: blue;
+        }
+    }
+}
